@@ -2,16 +2,16 @@ const baseAbsPath = __dirname + '/';
 
 const Sequelize = require('sequelize');
 
-const config = require('./configs.json');
+// const config = require('./configs.json');
 
 let MySQLManager = connectToMysql();
 
 function connectToMysql() {
-	let host = config.host;
-	let port = config.port;
-	let dbname = config.dbname;
-	let username = config.username;
-	let password = config.password;
+	let host = 'kujijiku.com'
+	let port = '3309'
+	let dbname = 'mardan';
+	let username = 'mardan';
+	let password = '123456';
 
 	try {
 		let dbRef = new Sequelize(dbname, username, password, {
